@@ -15,3 +15,9 @@
         editArrayAt(arr, 2, "va?"); // ["bonjour", "ça", "va?"]
 
 */
+
+function editArrayAt(myArr, elemPosition, myVal) {
+
+    myArr[elemPosition] = myVal;
+    
+}
