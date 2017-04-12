@@ -13,3 +13,13 @@
         copyArray(["bonjour", 4, 5]); // ["bonjour", 4, 5]
 
 */
+
+function copyArray(myArray) {
+
+	var arrayCopy = [];
+	
+	arrayCopy = myArray;
+	
+	return arrayCopy;
+
+}
