@@ -14,10 +14,11 @@
 
 */
 
-var strA = "";
-var strB = "";
-
 function editStringAt(str, position, char) {
+
+	var strA = "";
+	var strB = "";
+	var outString = "";
 
 	var i = 0;
 	
@@ -34,20 +35,20 @@ function editStringAt(str, position, char) {
 		i++;
 	}
 
-	var outString = strA + char + strB;
+	outString = strA + char + strB;
 	
 	return outString;
 
 }
 
 /*
-	The following one will not work because of the 63rd
+	The following one will not work because of the 65th
 	line.
 	Surpri
 */
 
 /*
-var str = "vaffanculo";
+var str = "supercalifragile";
 var position = 3;
 var chr = "X";
 
