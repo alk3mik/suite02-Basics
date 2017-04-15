@@ -19,50 +19,57 @@
 
 function sortNumbers(arr) {
 
-	var outArr = [];
 	var len = arr.length;
-	var arrayCopy = arr.slice(0, len);
-	var lenCopy = arrayCopy.length;
-	var indexToBeSliced = 0;
 
-	var upLim = 0;	
-	var j = 0;
-	var i = 0;
+// slice(beg, end) property create chucks of the array, starting from the position
+// "beg" and ending to the position "end", exlcuded.
+// If beg = 0 and end = array.length, then it creates a copy of the array. 
+
+	var indexToBeSpliced = 0;
+
+	var upLim = 0;
+	var i = 0;	
+	var j = 0;	
 	
-	while (i < len) {
+	while (i < len - 1) {
 
 		upLim = 9999999999999999;
 
-		lenCopy = arrayCopy.length
-		
-		if (lenCopy > 1) {
+//		lenNew = arr.length;
 
-			j = 0;
-			while (j < lenCopy) {
+			j = i;
+			while (j < len) {
 
 				if (arr[j] < upLim) {
+
 					upLim = arr[j];
-					indexToBeSliced = j;
-					console.log(upLim, indexToBeSliced);
+					
+					indexToBeSpliced = j;
+					
+//					console.log(upLim, indexToBeSliced);
+
 				}
 
 				j++;
 
 			}
 
-			console.log("cycle ", i, upLim, indexToBeSliced);
+//			console.log("cycle ", i, upLim, indexToBeSpliced);
 
-			outArr.push(upLim);
+// The splice(index, num, val2) property removes "num" adjacent elements starting from "index" and
+// replace them with val2;
+// It returns the removed sub-array, that is the following array [v_{index}, v_{index+1}, v_{index+2}, ..., v_{index + num -1}];
+// arrayCopy.splice(indexToBeSliced, 1);
 
-			arrayCopy.splice(indexToBeSliced, 1);
+			arr = (arr.splice(i, 0, Number(arr.splice(indexToBeSpliced, 1)))).concat(arr);
 
-		}
+//			console.log(arr);
 
 		i++;
 
 	}
 
-	return outArr;
+//	return outArr;
 }
 
-console.log(sortNumbers([4, 3, 5, 2]));
+// console.log(sortNumbers([4, 3, 5, 2]));

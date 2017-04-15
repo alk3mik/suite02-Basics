@@ -28,18 +28,22 @@ function getValuesFrom3DArray(arr) {
     var lenI = 0;
     var lenJ = 0;
     var lenK = 0;
-    
+
     var i = 0;
+    var j = 0;
+    var k = 0;
+    
+    i = 0;
     lenI = arr.length;
 
     while (i < lenI) {
 
-        var j = 0;
+        j = 0;
         lenJ = arr[i].length;
         
         while (j < lenJ) {
 
-            var k = 0;
+            k = 0;
             lenK = arr[i][j].length;
 
             while (k < lenK) {
