@@ -7,7 +7,7 @@
     Nous ne passerons que des nombres entiers positifs.
 
     Prototype:
-        void doubleSortNumbers(arr1, arr2);
+        arr doubleSortNumbers(arr1, arr2);
 
     Exemples:
         doubleSortNumbers([4, 3, 5, 2], [6, 3, 2]); // [2, 2, 3, 3, 4, 5, 6]
