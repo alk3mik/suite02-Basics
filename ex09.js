@@ -21,6 +21,9 @@ function sortNumbers(arr) {
 
 	var outArr = [];
 	var len = arr.length;
+// slice(beg, end) property create chucks of the array, starting from the position
+// "beg" and ending to the position "end", exlcuded.
+// If beg = 0 and end = array.length, then it creates a copy of the array. 
 	var arrayCopy = arr.slice(0, len);
 	var lenCopy = arrayCopy.length;
 	var indexToBeSliced = 0;
@@ -33,17 +36,19 @@ function sortNumbers(arr) {
 
 		upLim = 9999999999999999;
 
-		lenCopy = arrayCopy.length
-		
-		if (lenCopy > 1) {
+		lenCopy = arrayCopy.length;
 
 			j = 0;
 			while (j < lenCopy) {
 
-				if (arr[j] < upLim) {
-					upLim = arr[j];
+				if (arrayCopy[j] < upLim) {
+
+					upLim = arrayCopy[j];
+					
 					indexToBeSliced = j;
+					
 					console.log(upLim, indexToBeSliced);
+
 				}
 
 				j++;
@@ -53,10 +58,8 @@ function sortNumbers(arr) {
 			console.log("cycle ", i, upLim, indexToBeSliced);
 
 			outArr.push(upLim);
-
+// The splice(index, num) property removes "num" adjacent elements, starting from "index".
 			arrayCopy.splice(indexToBeSliced, 1);
-
-		}
 
 		i++;
 
