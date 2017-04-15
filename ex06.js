@@ -14,3 +14,27 @@
     Attention, la fonction ne doit pas modifier le tableau modèle.
 
 */
+
+function getValuesByType(arr, type) {
+
+	var outArray = [];
+
+	var i = 0;
+
+	var len = arr.length;
+
+	while (i < len) {
+
+		if (typeof(arr[i]) === type) {
+
+			outArray.push(arr[i]);
+		
+		}
+
+		i++;
+	
+	}
+
+	return outArray;
+
+}
