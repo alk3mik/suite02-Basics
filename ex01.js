@@ -13,8 +13,8 @@
 
 */
 
-function getCharAt(myString, charPosition) {
+function getCharAt(str, position) {
 
-	return myString[charPosition];
+	return str[position];
 
 }

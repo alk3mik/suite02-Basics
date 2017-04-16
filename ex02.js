@@ -16,8 +16,8 @@
 
 */
 
-function editArrayAt(myArr, elemPosition, myVal) {
+function editArrayAt(arr, position, value) {
 
-    myArr[elemPosition] = myVal;
+    arr[position] = value;
     
 }
