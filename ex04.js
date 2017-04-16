@@ -16,66 +16,31 @@
 
 function editStringAt(str, position, char) {
 
-	var strA = "";
-	var strB = "";
-	var outString = "";
+	var bkpString = "";
+	len = str.length;
 
 	var i = 0;
-	
-	while (i < position) {
-		strA = strA + str[i];
-		i++;
-	}
-
-	i++;
-
-	while (i < str.length) {
-
-		strB = strB + str[i];
-		i++;
-	}
-
-	outString = strA + char + strB;
-	
-	return outString;
-
-}
-
-/*
-	The following one will not work because of the 65th
-	line.
-	Surpri
-*/
-
-/*
-var str = "supercalifragile";
-var position = 3;
-var chr = "X";
-
-function editStringAt(str, position, chr) {
-
-	var outStr = "";
-
-	var len = str.length;
-
-	var i = 0;
-	
 	while (i < len) {
-	
-		if (i === position) {
-			str[i] = chr;
-			console.log(str[i], len, chr);
-		}
-	
-		console.log(outStr, outStr.length);
 
-		outStr = outStr + str[i];
+		if (i < position || i > position) {
+			bkpString = bkpString + str[i];
+		} else {
+			bkpString = bkpString + char;
+		}
 
 		i++;
 	
 	}
 
-	return outStr;
+	str = bkpString;
+
+	return str;
 
 }
+/*
+var str = "pippo";
+console.log(str);
+var result = editStringAt(str, 2, "X");
+console.log(result, "*");
+console.log(str);
 */
