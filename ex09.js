@@ -17,16 +17,12 @@
 
 */
 
+// var myArr = [4, 3, 5, 2];
+
 function sortNumbers(arr) {
 
 	var len = arr.length;
-
-// slice(beg, end) property create chucks of the array, starting from the position
-// "beg" and ending to the position "end", exlcuded.
-// If beg = 0 and end = array.length, then it creates a copy of the array. 
-
 	var indexToBeSpliced = 0;
-
 	var upLim = 0;
 	var i = 0;	
 	var j = 0;	
@@ -34,8 +30,6 @@ function sortNumbers(arr) {
 	while (i < len - 1) {
 
 		upLim = 9999999999999999;
-
-//		lenNew = arr.length;
 
 			j = i;
 			while (j < len) {
@@ -46,7 +40,7 @@ function sortNumbers(arr) {
 					
 					indexToBeSpliced = j;
 					
-//					console.log(upLim, indexToBeSliced);
+//					console.log(upLim, indexToBeSpliced);
 
 				}
 
@@ -60,8 +54,9 @@ function sortNumbers(arr) {
 // replace them with val2;
 // It returns the removed sub-array, that is the following array [v_{index}, v_{index+1}, v_{index+2}, ..., v_{index + num -1}];
 // arrayCopy.splice(indexToBeSliced, 1);
+//
 
-			arr = (arr.splice(i, 0, Number(arr.splice(indexToBeSpliced, 1)))).concat(arr);
+			arr.splice(i, 0, Number(arr.splice(indexToBeSpliced, 1)));
 
 //			console.log(arr);
 
@@ -69,7 +64,6 @@ function sortNumbers(arr) {
 
 	}
 
-//	return outArr;
 }
-
-// console.log(sortNumbers([4, 3, 5, 2]));
+//sortNumbers(myArr);
+//console.log("*** ", myArr);
