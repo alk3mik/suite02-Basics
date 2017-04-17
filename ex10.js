@@ -21,14 +21,11 @@ function doubleSortNumbers(arr1, arr2) {
 
 	var outArr = arr1.concat(arr2);
 
-	console.log(outArr);
-
 	sortNumbers(outArr);
 
 	return outArr;
 
 }
-
 
 function sortNumbers(arr) {
 
@@ -42,22 +39,22 @@ function sortNumbers(arr) {
 
 		upLim = 9999999999999999;
 
-			j = i;
-			while (j < len) {
+		j = i;
+		while (j < len) {
 
-				if (arr[j] < upLim) {
+			if (arr[j] < upLim) {
 
-					upLim = arr[j];
-					
-					indexToBeSpliced = j;
+				upLim = arr[j];
 
-				}
-
-				j++;
+				indexToBeSpliced = j;
 
 			}
 
-			arr = (arr.splice(i, 0, Number(arr.splice(indexToBeSpliced, 1)))).concat(arr);
+			j++;
+
+		}
+
+		arr.splice(i, 0, Number(arr.splice(indexToBeSpliced, 1)));
 
 		i++;
 
@@ -67,5 +64,4 @@ function sortNumbers(arr) {
 
 var myArr1 = [4, 3, 5, 2];
 var myArr2 = [6, 3, 2];
-
 console.log(doubleSortNumbers(myArr1, myArr2));
